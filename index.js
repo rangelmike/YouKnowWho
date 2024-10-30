@@ -1,6 +1,10 @@
-let firstButton = document.getElementById('firstButton');
-let secondButton = document.getElementById('secondButton');
+const firstButton = document.getElementById('firstButton');
+const secondButton = document.getElementById('secondButton');
 const body = document.body;
+
+if (window.innerWidth < 1024) {  // assuming desktop width is 1024px or more
+    document.body.innerHTML = "<h1>Access Restricted to Desktop Devices Only</h1>";
+}
 
 function swapElements(element1, element2) {
     const temp = document.createElement("div");
